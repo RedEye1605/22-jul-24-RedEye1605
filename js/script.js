@@ -1,3 +1,4 @@
+// Banner autoslide functionality
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -9,17 +10,17 @@ function plusDivs(n = 1) {
 // Function to display the correct slide
 function showDivs(n) {
     var i;
-    var x = document.getElementsByClassName("banner-item");
-    if (n > x.length) {
+    var slides = document.querySelectorAll(".banner-item img");
+    if (n > slides.length) {
         slideIndex = 1;
     }
     if (n < 1) {
-        slideIndex = x.length;
+        slideIndex = slides.length;
     }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-    x[slideIndex - 1].style.display = "block";
+    slides[slideIndex - 1].style.display = "block";
 }
 
 // Automatically change slides every 3 seconds
@@ -29,22 +30,63 @@ setInterval(() => {
 
 // Form validation function
 function formValidation() {
-    let name = document.getElementById("input-name").value;
+    let isValid = true; 
 
-    if (name.trim() === "") {
-        alert("Maaf, inputan anda kosong.");
+    // Get the input elements
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let interest = document.getElementById("interest");
+
+    // Validate name
+    if (name.value.trim() === "") {
+        name.classList.add("invalid");
+        name.classList.remove("valid"); 
+        document.getElementById("name-error").textContent = "* Please fill this";
+        isValid = false;
     } else {
-        alert("Sukses menginput.");
+        name.classList.remove("invalid");
+        name.classList.add("valid"); 
+        document.getElementById("name-error").textContent = "";
+    }
+
+    // Validate email
+    if (email.value.trim() === "") {
+        email.classList.add("invalid");
+        email.classList.remove("valid"); 
+        document.getElementById("email-error").textContent = "* Please fill this";
+        isValid = false;
+    } else {
+        email.classList.remove("invalid");
+        email.classList.add("valid"); 
+        document.getElementById("email-error").textContent = "";
+    }
+
+    // Validate interest
+    if (interest.value.trim() === "") {
+        interest.classList.add("invalid");
+        interest.classList.remove("valid"); 
+        document.getElementById("interest-error").textContent = "* Please fill this";
+        isValid = false;
+    } else {
+        interest.classList.remove("invalid");
+        interest.classList.add("valid"); 
+        document.getElementById("interest-error").textContent = "";
+    }
+
+    if (isValid) {
+        alert("Thank you for contacting us, " + name.value + "! We will get back to you soon.");
+        document.getElementById("contact-form").reset(); 
     }
 }
 
 // Add event listener for form submission
-document.getElementById("submit-button").addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent the form from submitting
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
     formValidation();
 });
 
 // Menu toggle for mobile view
-document.querySelector('.menu-toggle').addEventListener('click', function() {
+document.querySelector('.menu-toggle').addEventListener('click', () => {
     document.querySelector('.menu').classList.toggle('active');
 });
+

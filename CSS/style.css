@@ -23,6 +23,12 @@ nav {
     font-weight: bold;
 }
 
+.main-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
 .menu a {
     margin-left: 20px;
     text-decoration: none;
@@ -48,18 +54,21 @@ nav {
 
 .about {
     display: flex;
-    justify-content: space-between;
     padding: 20px;
     background-color: #fff;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-.image-container {
-    width: 60%;
+.banner-item {
+    width: 100%;
 }
 
 .testimonial {
-    width: 35%;
-    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .testimonial blockquote {
@@ -115,6 +124,26 @@ nav {
     cursor: pointer;
 }
 
+/* Style for error messages */
+.error-message {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 0.25em;
+    display: block; 
+}
+
+/* Style for invalid input fields */
+input.invalid, select.invalid {
+    margin-bottom: 4px;
+    border: 1px solid red;
+}
+
+/* When input is valid */
+input.valid, select.valid {
+    margin-bottom: 0;
+    border: 1px solid green; 
+}
+
 .features {
     padding: 20px;
     background-color: #fff;
@@ -144,6 +173,13 @@ nav {
     background-color: #f8f8f8;
 }
 
+.packages-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .packages h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -151,8 +187,9 @@ nav {
 
 .package {
     background-color: #fff;
+    width: 200px;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     margin-bottom: 20px;
 }
 
@@ -206,3 +243,35 @@ footer a {
         width: 100%;
     }
 }
+  
+/* Untuk layar laptop kecil */
+  @media screen and (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        display: flex;
+    }
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container, .testimonial {
+        width: 100%;
+    }
+  }
+  
+  /* Untuk layar laptop sedang */
+  @media screen and (min-width: 1025px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container, .testimonial {
+        width: 100%;
+    }
+  }
+  

@@ -13,9 +13,9 @@
                 <a href="#">moqups</a>
             </div>
             <div class="menu">
-                <a href="#">Home</a>
-                <a href="#">Our Package</a>
-                <a href="#">Call Us</a>
+                <a href="#banner-section">Home</a>
+                <a href="#package-section">Our Package</a>
+                <a href="#call-action">Call Us</a>
             </div>
         </div>
     </nav>
@@ -26,42 +26,51 @@
     </header>
 
     <main>
-        <section class="about">
-            <div class="image-container">
-                <img src="placeholder.png" alt="Image">
-            </div>
-            <div class="testimonial">
-                <blockquote>
-                    "Liburan jadi menyenangkan bersama Travel Agentku."
-                </blockquote>
-                <cite>
-                    <p>Florence Hughes</p>
-                    <p>Ibu Rumah Tangga, 28</p>
-                </cite>
-            </div>
-        </section>
-
-        <section class="contact-us">
-            <h2>Contact Us</h2>
-            <p>Sales akan menghubungi anda 1x24 Jam setelah data kami terima.</p>
-            <form id="contact-form">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="First and last name">
-
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="example@email.com">
-
-                <label for="interest">What are you interested in?</label>
-                <select id="interest" name="interest">
-                    <option value="">Select option</option>
-                    <option value="bali">Bali</option>
-                    <option value="japan">Japan</option>
-                    <option value="singapore">Singapore</option>
-                </select>
-
-                <button type="submit">SEND</button>
-            </form>
-        </section>
+        <article class="main-content" id="banner-section">
+            <section class="about">
+                <div class="banner-item">
+                    <img src="asset\bali.avif" alt="Image" width="100%" height="250px">
+                    <img src="asset\japan.jpg" alt="Image" width="100%" height="250px">
+                    <img src="asset\singapore.webp" alt="Image" width="100%" height="250px">
+                    <img src="asset\bandung.avif" alt="Image" width="100%" height="250px">
+                    <img src="asset\surabaya.jpg" alt="Image" width="100%" height="250px">
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        "Liburan jadi menyenangkan bersama Travel Agentku."
+                    </blockquote>
+                    <cite>
+                        <p>Florence Hughes</p>
+                        <p>Ibu Rumah Tangga, 28</p>
+                    </cite>
+                </div>
+            </section>
+    
+            <section class="contact-us">
+                <h2>Contact Us</h2>
+                <p>Sales akan menghubungi anda 1x24 Jam setelah data kami terima.</p>
+                <form id="contact-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="First and last name">
+                    <div id="name-error" class="error-message"></div>
+                
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com">
+                    <div id="email-error" class="error-message"></div>
+                
+                    <label for="interest">What are you interested in?</label>
+                    <select id="interest" name="interest">
+                        <option value="">Select option</option>
+                        <option value="bali">Bali</option>
+                        <option value="japan">Japan</option>
+                        <option value="singapore">Singapore</option>
+                    </select>
+                    <div id="interest-error" class="error-message"></div>
+                
+                    <button type="submit" id="submit-button">SEND</button>
+                </form>                
+            </section>
+        </article>
 
         <section class="features">
             <h2>Use this space to provide users with more information about your offer.</h2>
@@ -72,32 +81,34 @@
             </ul>
         </section>
 
-        <section class="packages">
+        <section class="packages" id="package-section">
             <h2>Our Package</h2>
-            <div class="package">
-                <h3>Bali</h3>
-                <p>Travel dan wisata di Bali. kunjungi cagar budaya dan kuliner yang menarik</p>
-            </div>
-            <div class="package">
-                <h3>Japan</h3>
-                <p>Travel dan wisata di Japan. kunjungi cagar budaya dan kuliner yang menarik</p>
-            </div>
-            <div class="package">
-                <h3>Singapore</h3>
-                <p>This description supports and extends the bullet point above.</p>
-            </div>
-            <div class="package">
-                <h3>Bandung</h3>
-                <p>This description supports and extends the bullet point above.</p>
-            </div>
-            <div class="package">
-                <h3>Surabaya</h3>
-                <p>This description supports and extends the bullet point above.</p>
-            </div>
-            <div class="package">
-                <h3>Third Feature</h3>
-                <p>This description supports and extends the bullet point above.</p>
-            </div>
+                <article class="packages-item">
+                    <div class="package">
+                        <h3>Bali</h3>
+                        <p>Travel dan wisata di Bali. kunjungi cagar budaya dan kuliner yang menarik</p>
+                    </div>
+                    <div class="package">
+                        <h3>Japan</h3>
+                        <p>Travel dan wisata di Japan. kunjungi cagar budaya dan kuliner yang menarik</p>
+                    </div>
+                    <div class="package">
+                        <h3>Singapore</h3>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+                    <div class="package">
+                        <h3>Bandung</h3>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+                    <div class="package">
+                        <h3>Surabaya</h3>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+                    <div class="package">
+                        <h3>Third Feature</h3>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+            </article>
         </section>
 
         <section class="cta">
@@ -107,7 +118,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="call-action">
         <p>© 2019 Moqups</p>
         <a href="#">Terms of Service</a>
         <a href="#">Privacy Policy</a>
