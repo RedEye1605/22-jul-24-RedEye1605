@@ -206,9 +206,13 @@ input.valid, select.valid {
 }
 
 .features ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
     list-style: none;
     padding: 0;
-    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -217,6 +221,8 @@ input.valid, select.valid {
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
+    text-align: center;
+    min-width: 80%;
 }
 
 /* Packages section styling */
@@ -300,7 +306,7 @@ footer a {
 /* Media queries for responsive design */
 
 /* For small screens like phones and tablets */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .container {
         display: flex;
         flex-direction: column;
