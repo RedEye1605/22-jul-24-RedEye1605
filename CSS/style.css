@@ -196,7 +196,8 @@ input.valid, select.valid {
 
 .package {
     background-color: #fff;
-    width: 200px;
+    width: 100%;
+    max-width: 350px;
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
