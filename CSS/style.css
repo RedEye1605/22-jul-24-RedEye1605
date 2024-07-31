@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top: 60px;
     box-sizing: border-box;
 }
 
@@ -10,6 +10,30 @@ body {
 nav {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+/* Add space above to prevent content from being hidden by fixed navbar */
+
+/* Main section */
+#main-section {
+    padding-top: 130px; 
+    margin-top: -90px; 
+}
+
+/* Packages section */
+#package-section {
+    padding-top: 100px; 
+    margin-top: -80px; 
+}
+
+/* Call to action section */
+#call-action-section {
+    padding-top: 60px; 
+    margin-top: -60px;
 }
 
 /* Container for navigation and main content */
@@ -56,7 +80,7 @@ nav {
 }
 
 .main-header h1 {
-    margin: 0;
+    margin: 15px;
     font-size: 36px;
 }
 
@@ -94,9 +118,18 @@ nav {
 }
 
 .testimonial-item {
-    display: block;
-    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     color: #777;
+}
+
+.testimonial-item div img {
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+    border-radius: 50%;
 }
 
 /* Contact Us section styling */
