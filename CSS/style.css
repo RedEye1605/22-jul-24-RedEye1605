@@ -1,91 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 nav {
-    border: 1px solid;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.container {
     display: flex;
     justify-content: space-between;
-    padding: 12px;
     align-items: center;
+    padding: 10px 20px;
 }
 
-.logo-icon{
-    border: 1px solid;
-    background-image: url('https://www.treehugger.com/thmb/Ry8TrXKVLlp3Nur58hoU8phaqXQ=/4912x2760/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2017__03__AnnRic_Malaysia_Open_Nature_2017-a290f0c9e06348e881053594478131fd.jpeg');
-    width: 25px;
-    height: 25px;
-    background-size: cover;
-    margin-left: 24px;    
+.logo a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
 }
 
-.nav-container{
+.menu a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+}
+
+.main-header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.main-header p {
+    font-size: 18px;
+    color: #777;
+}
+
+.about {
     display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
 }
 
-.nav-item{
-    border: 1px solid;
-    padding: 8px;
+.image-container {
+    width: 60%;
 }
 
-.main-title{
+.testimonial {
+    width: 35%;
     text-align: center;
 }
 
-.main-content{
-    border: 1px solid;
-    width: 100%;
-    height: 250px;
+.testimonial blockquote {
+    font-style: italic;
+    color: #333;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+}
+
+.contact-us {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.contact-us h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-us p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-us form {
     display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-.main-content-item{
-    border: 1px solid;
-    width: 100%;
-    height: 250px;
+.contact-us label {
+    margin-bottom: 5px;
 }
 
-.main-content-banner{
-    border: 1px solid;
-    width: 100%;
-    height: 150px;
-
+.contact-us input, .contact-us select {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.item-icon{
-    height: 25px;
-    width: 25px;
-    border: 1px solid;
-    background-image: url('https://www.treehugger.com/thmb/Ry8TrXKVLlp3Nur58hoU8phaqXQ=/4912x2760/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2017__03__AnnRic_Malaysia_Open_Nature_2017-a290f0c9e06348e881053594478131fd.jpeg');
-    background-size: cover;
-    border-radius: 50%;
+.contact-us button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.main-item{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+.features {
+    padding: 20px;
+    background-color: #fff;
 }
 
-.banner-1 {
-    background-image: none;
+.features h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.banner-2 {
-    background-image: none;
+.features ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.banner-3 {
-    background-image: none;
+.features li {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-@media only screen and (max-width=600px) {
-    .header-wrapper {
+.packages {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.packages h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.package {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.cta p {
+    margin-bottom: 20px;
+}
+
+.cta button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+footer p {
+    margin: 0;
+    color: #777;
+}
+
+footer a {
+    margin-left: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .about {
         flex-direction: column;
+        align-items: center;
     }
 
-    .menu {
+    .image-container, .testimonial {
         width: 100%;
-        flex-direction: column;
-    }
-
-    .logo-icon {
-        margin-bottom: 14px;
     }
 }

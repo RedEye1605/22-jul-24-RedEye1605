@@ -3,63 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\style.css">
-
+    <title>Your Trusted Travel Agent</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <nav>
-        <header class="header-wrapper">
-            <div class="logo-icon">Ini Title</div>
-            <div class="menu">
-                <button>Home</button>
-                <button>My Profile</button>
-                <button>Portofolio</button>
-                <button>Message US</button>
+        <div class="container">
+            <div class="logo">
+                <a href="#">moqups</a>
             </div>
-        </header>
-
-        <section class="nav-container">
-            <a class="nav-item">Home</a>
-            <a class="nav-item">Our Package</a>
-            <a class="nav-item">Call us</a>
-        </section>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Our Package</a>
+                <a href="#">Call Us</a>
+            </div>
+        </div>
     </nav>
 
+    <header class="main-header">
+        <h1>Your Trusted Travel Agent's</h1>
+        <p>Your happiness is our happiness</p>
+    </header>
+
     <main>
-        <article class="main-title">
-            <header>
-                <h1>Your Trusted Travel Agent</h1>
-            </header>
+        <section class="about">
+            <div class="image-container">
+                <img src="placeholder.png" alt="Image">
+            </div>
+            <div class="testimonial">
+                <blockquote>
+                    "Liburan jadi menyenangkan bersama Travel Agentku."
+                </blockquote>
+                <cite>
+                    <p>Florence Hughes</p>
+                    <p>Ibu Rumah Tangga, 28</p>
+                </cite>
+            </div>
+        </section>
 
-            <p>Your happiness is our happiness</p>
-        </article>
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <p>Sales akan menghubungi anda 1x24 Jam setelah data kami terima.</p>
+            <form id="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="First and last name">
 
-        <section class="main-content">
-            <article class="main-content-item">
-                <div class="main-content-banner">
-                    <div class="banner-1"></div>
-                    <div class="banner-1"></div>
-                    <div class="banner-1"></div>
-                </div>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com">
 
-                <div class="main-item">
-                    <div class="item-icon"> </div>
+                <label for="interest">What are you interested in?</label>
+                <select id="interest" name="interest">
+                    <option value="">Select option</option>
+                    <option value="bali">Bali</option>
+                    <option value="japan">Japan</option>
+                    <option value="singapore">Singapore</option>
+                </select>
 
-                    <div>
-                        <h3 style="margin: none;">Maria Bolung</h3>
-                        <p style="margin: none;">Ibu Rumah Tangga,28</p>
-                    </div>
-                </div>
-            </article>
-
-            <form class="main-content-item">
-                <input type="text">
+                <button type="submit">SEND</button>
             </form>
+        </section>
+
+        <section class="features">
+            <h2>Use this space to provide users with more information about your offer.</h2>
+            <ul>
+                <li>Your first feature, written in the form of a benefit statement.</li>
+                <li>Your second feature, written in the form of a benefit statement.</li>
+                <li>Your third feature written, in the form of a benefit statement.</li>
+            </ul>
+        </section>
+
+        <section class="packages">
+            <h2>Our Package</h2>
+            <div class="package">
+                <h3>Bali</h3>
+                <p>Travel dan wisata di Bali. kunjungi cagar budaya dan kuliner yang menarik</p>
+            </div>
+            <div class="package">
+                <h3>Japan</h3>
+                <p>Travel dan wisata di Japan. kunjungi cagar budaya dan kuliner yang menarik</p>
+            </div>
+            <div class="package">
+                <h3>Singapore</h3>
+                <p>This description supports and extends the bullet point above.</p>
+            </div>
+            <div class="package">
+                <h3>Bandung</h3>
+                <p>This description supports and extends the bullet point above.</p>
+            </div>
+            <div class="package">
+                <h3>Surabaya</h3>
+                <p>This description supports and extends the bullet point above.</p>
+            </div>
+            <div class="package">
+                <h3>Third Feature</h3>
+                <p>This description supports and extends the bullet point above.</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Your Closing Argument Headline</h2>
+            <p>Suspensidse egestas rhoncus urna in bibendum. Donec urna neque, euismod sed justo quis, convallis tincidunt risus. Phasellus fringilla odio vel erat fringilla.</p>
+            <button>CALL TO ACTION</button>
         </section>
     </main>
 
-    <script src="js\script.js"></script>
+    <footer>
+        <p>© 2019 Moqups</p>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
