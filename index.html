@@ -7,49 +7,59 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+    <!-- Navigation bar -->
     <nav>
         <div class="container">
             <div class="logo">
                 <a href="#">moqups</a>
             </div>
             <div class="menu">
-                <a href="#banner-section">Home</a>
+                <a href="#main-section">Home</a>
                 <a href="#package-section">Our Package</a>
-                <a href="#call-action">Call Us</a>
+                <a href="#call-action-section">Call Us</a>
             </div>
         </div>
     </nav>
 
-    <header class="main-header">
+    <!-- Header section -->
+    <header class="main-header" id="main-section">
         <h1>Your Trusted Travel Agent's</h1>
         <p>Your happiness is our happiness</p>
     </header>
 
+    <!-- Main content area -->
     <main>
-        <article class="main-content" id="banner-section">
+        <!-- Main content section -->
+        <article class="main-content">
             <section class="about">
                 <div class="banner-item">
-                    <img src="asset\bali.avif" alt="Image" width="100%" height="250px">
-                    <img src="asset\japan.jpg" alt="Image" width="100%" height="250px">
-                    <img src="asset\singapore.webp" alt="Image" width="100%" height="250px">
-                    <img src="asset\bandung.avif" alt="Image" width="100%" height="250px">
-                    <img src="asset\surabaya.jpg" alt="Image" width="100%" height="250px">
+                    <img src="asset\bali.avif" alt="Bali Image" width="100%" height="250px">
+                    <img src="asset\japan.jpg" alt="Japan Image" width="100%" height="250px">
+                    <img src="asset\singapore.webp" alt="Singapore Image" width="100%" height="250px">
+                    <img src="asset\bandung.avif" alt="Bandung Image" width="100%" height="250px">
+                    <img src="asset\surabaya.jpg" alt="Surabaya Image" width="100%" height="250px">
                 </div>
                 <div class="testimonial">
                     <blockquote>
                         "Liburan jadi menyenangkan bersama Travel Agentku."
                     </blockquote>
-                    <cite>
-                        <p>Florence Hughes</p>
-                        <p>Ibu Rumah Tangga, 28</p>
-                    </cite>
+                    <div class="testimonial-item">
+                        <div>
+                            <img src="path_to_image" alt="Testimonial Image">
+                        </div>
+                        <cite>
+                            <p>Florence Hughes</p>
+                            <p>Ibu Rumah Tangga, 28</p>
+                        </cite>
+                    </div>
                 </div>
             </section>
     
+            <!-- Contact section -->
             <section class="contact-us">
                 <h2>Contact Us</h2>
                 <p>Sales akan menghubungi anda 1x24 Jam setelah data kami terima.</p>
-                <form id="contact-form">
+                <form id="contact-form" method="post">
                     <label for="name">Your Name:</label>
                     <input type="text" id="name" name="name" placeholder="First and last name">
                     <div id="name-error" class="error-message"></div>
@@ -72,6 +82,7 @@
             </section>
         </article>
 
+        <!-- Features section -->
         <section class="features">
             <h2>Use this space to provide users with more information about your offer.</h2>
             <ul>
@@ -81,49 +92,51 @@
             </ul>
         </section>
 
+        <!-- Packages section -->
         <section class="packages" id="package-section">
             <h2>Our Package</h2>
-                <article class="packages-item">
-                    <div class="packages-item-1">
-                        <div class="package">
-                            <h3>Bali</h3>
-                            <p>Travel dan wisata di Bali. kunjungi cagar budaya dan kuliner yang menarik</p>
-                        </div>
-                        <div class="package">
-                            <h3>Japan</h3>
-                            <p>Travel dan wisata di Japan. kunjungi cagar budaya dan kuliner yang menarik</p>
-                        </div>
-                        <div class="package">
-                            <h3>Singapore</h3>
-                            <p>This description supports and extends the bullet point above.</p>
-                        </div>
+            <article class="packages-item">
+                <div class="packages-item-1">
+                    <div class="package">
+                        <h3>Bali</h3>
+                        <p>Travel dan wisata di Bali. kunjungi cagar budaya dan kuliner yang menarik</p>
                     </div>
-
-                    <div class="packages-item-2">
-                        <div class="package">
-                            <h3>Bandung</h3>
-                            <p>This description supports and extends the bullet point above.</p>
-                        </div>
-                        <div class="package">
-                            <h3>Surabaya</h3>
-                            <p>This description supports and extends the bullet point above.</p>
-                        </div>
-                        <div class="package">
-                            <h3>Third Feature</h3>
-                            <p>This description supports and extends the bullet point above.</p>
-                        </div>
+                    <div class="package">
+                        <h3>Japan</h3>
+                        <p>Travel dan wisata di Japan. kunjungi cagar budaya dan kuliner yang menarik</p>
                     </div>
+                    <div class="package">
+                        <h3>Singapore</h3>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+                </div>
+                <div class="packages-item-2">
+                    <div class="package">
+                        <h3>Bandung</h3>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+                    <div class="package">
+                        <h3>Surabaya</h3>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+                    <div class="package">
+                        <h3>Third Feature</h3>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+                </div>
             </article>
         </section>
 
-        <section class="cta">
+        <!-- Call to action section -->
+        <section class="cta" id="call-action-section">
             <h2>Your Closing Argument Headline</h2>
             <p>Suspensidse egestas rhoncus urna in bibendum. Donec urna neque, euismod sed justo quis, convallis tincidunt risus. Phasellus fringilla odio vel erat fringilla.</p>
             <button>CALL TO ACTION</button>
         </section>
     </main>
 
-    <footer id="call-action">
+    <!-- Footer section -->
+    <footer>
         <p>© 2019 Moqups</p>
         <a href="#">Terms of Service</a>
         <a href="#">Privacy Policy</a>

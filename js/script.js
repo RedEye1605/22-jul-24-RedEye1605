@@ -30,7 +30,7 @@ setInterval(() => {
 
 // Form validation function
 function formValidation() {
-    let isValid = true; 
+    let isValid = true;
 
     // Get the input elements
     let name = document.getElementById("name");
@@ -40,48 +40,48 @@ function formValidation() {
     // Validate name
     if (name.value.trim() === "") {
         name.classList.add("invalid");
-        name.classList.remove("valid"); 
+        name.classList.remove("valid");
         document.getElementById("name-error").textContent = "* Please fill this";
         isValid = false;
     } else {
         name.classList.remove("invalid");
-        name.classList.add("valid"); 
+        name.classList.add("valid");
         document.getElementById("name-error").textContent = "";
     }
 
     // Validate email
     if (email.value.trim() === "") {
         email.classList.add("invalid");
-        email.classList.remove("valid"); 
+        email.classList.remove("valid");
         document.getElementById("email-error").textContent = "* Please fill this";
         isValid = false;
     } else {
         email.classList.remove("invalid");
-        email.classList.add("valid"); 
+        email.classList.add("valid");
         document.getElementById("email-error").textContent = "";
     }
 
     // Validate interest
     if (interest.value.trim() === "") {
         interest.classList.add("invalid");
-        interest.classList.remove("valid"); 
+        interest.classList.remove("valid");
         document.getElementById("interest-error").textContent = "* Please fill this";
         isValid = false;
     } else {
         interest.classList.remove("invalid");
-        interest.classList.add("valid"); 
+        interest.classList.add("valid");
         document.getElementById("interest-error").textContent = "";
     }
 
     if (isValid) {
         alert("Thank you for contacting us, " + name.value + "! We will get back to you soon.");
-        document.getElementById("contact-form").reset(); 
+        document.getElementById("contact-form").reset();
     }
 }
 
 // Add event listener for form submission
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); 
+    event.preventDefault();
     formValidation();
 });
 
