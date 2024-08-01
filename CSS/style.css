@@ -326,7 +326,7 @@ footer a {
     .logo img{
         width: 100px;
     }
-    
+
     .menu{
         display: flex;
         flex-direction: column;
@@ -371,6 +371,19 @@ footer a {
     .travel-package img {
         width: 45px;
         height: 45px;
+    }
+
+    /* Main section */
+    #main-section {
+        padding-top: 140px; 
+        margin-top: -90px; 
+    }
+        
+    /* Packages section */
+    #package-section {
+        padding-top: 110px; 
+        margin-top: -100px; 
+        padding-bottom: 50px;
     }
 }
   
