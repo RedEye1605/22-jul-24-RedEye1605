@@ -323,6 +323,10 @@ footer a {
 /* Media queries for responsive design */
 
 @media screen and (max-width: 370px) {
+    .logo img{
+        width: 100px;
+    }
+    
     .menu{
         display: flex;
         flex-direction: column;
@@ -346,6 +350,10 @@ footer a {
 
 /* For small screens like phones and tablets */
 @media screen and (max-width: 768px) {
+    .logo img{
+        width: 100px;
+    }
+
     .container {
         display: flex;
         flex-direction: column;
