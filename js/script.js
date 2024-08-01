@@ -77,12 +77,18 @@ function formValidation() {
         alert("Thank you for contacting us, " + name.value + "! We will get back to you soon.");
         document.getElementById("contact-form").reset();
     }
+
+    return isValid; // Return the validation result
 }
 
 // Add event listener for form submission
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    formValidation();
+    event.preventDefault(); // Prevent the default form submission
+    if (formValidation()) {
+        // If form validation is successful, submit the form
+        // document.getElementById("contact-form").submit();
+        document.getElementById("contact-form").reset();
+    }
 });
 
 // Menu toggle for mobile view

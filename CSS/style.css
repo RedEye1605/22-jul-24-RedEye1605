@@ -27,7 +27,8 @@ nav {
 /* Packages section */
 #package-section {
     padding-top: 100px; 
-    margin-top: -80px; 
+    margin-top: -100px; 
+    padding-bottom: 50px;
 }
 
 /* Call to action section */
@@ -57,6 +58,7 @@ nav {
 
 /* Main content styling */
 .main-content {
+    background-color: #f8f8f8;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
@@ -93,7 +95,7 @@ nav {
 .about {
     display: flex;
     padding: 20px;
-    background-color: #fff;
+    background-color: #f8f8f8;
     flex-direction: column;
     align-items: flex-end;
 }
@@ -105,6 +107,7 @@ nav {
 
 /* Testimonial section styling */
 .testimonial {
+    background-color: #f8f8f8;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -226,12 +229,11 @@ input.valid, select.valid {
 }
 
 /* Packages section styling */
-.packages {
-    padding: 20px;
+.travel-packages {
     background-color: #f8f8f8;
 }
 
-.packages-item {
+.travel-packages-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -239,7 +241,7 @@ input.valid, select.valid {
     flex-direction: column;
 }
 
-.packages-item-1, .packages-item-2 {
+.travel-package-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; 
@@ -247,19 +249,34 @@ input.valid, select.valid {
     justify-content: center; 
 }
 
-.packages h2 {
+.travel-package img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.travel-packages h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.package {
-    background-color: #fff;
+.travel-package {
+    display: flex;
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
 }
+
+.travel-package-details {
+    flex: 1; 
+    background-color: #fff; 
+    padding: 10px; 
+    border-radius: 10%; 
+}
+
 
 /* Call to action section styling */
 .cta {
@@ -305,6 +322,28 @@ footer a {
 
 /* Media queries for responsive design */
 
+@media screen and (max-width: 370px) {
+    .menu{
+        display: flex;
+        flex-direction: column;
+        width: -webkit-fill-available;
+        text-align: center;
+    }
+
+    /* Main section */
+    #main-section {
+        padding-top: 400px; 
+        margin-top: -270px; 
+    }
+
+    /* Packages section */
+    #package-section {
+        padding-top: 180px; 
+        margin-top: -100px; 
+        padding-bottom: 50px;
+    }
+}
+
 /* For small screens like phones and tablets */
 @media screen and (max-width: 768px) {
     .container {
@@ -319,6 +358,11 @@ footer a {
 
     .image-container, .testimonial {
         width: 100%;
+    }
+
+    .travel-package img {
+        width: 45px;
+        height: 45px;
     }
 }
   
